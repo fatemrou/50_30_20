@@ -10,21 +10,13 @@ def calculate_503020():
     needs_lbl.configure(text=f"needs :{needs} $")
     save_lbl.configure(text=f"save :{save} $")
     dreams_lbl.configure(text=f"dream :{dreams} $")
-
+# def message(): 
+#     app_1 = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 # ------ create app
 app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
-app.geometry("400x300")
-# configure the grid
-app.columnconfigure(0, weight=1)
-app.columnconfigure(1, weight=1)
-app.columnconfigure(2, weight=1)
-app.columnconfigure(3, weight=1)
-app.columnconfigure(4, weight=1)
-app.columnconfigure(5, weight=1)
-app.columnconfigure(6, weight=1)
 #-----------salary_text
 salary_lbl = ttk.Label(app ,text="Please enter your salary and month")
-salary_lbl.grid(column=0, row=0, sticky=ttk.EW, padx=20, pady=5)
+salary_lbl.grid(columnspan=2, row=0, sticky=ttk.N, padx=20, pady=5)
 #------------salary
 salary_lbl_1 = ttk.Label(app ,text="salary:")
 salary_lbl_1.grid(column=0, row=1, sticky=ttk.W, padx=10, pady=5)
@@ -46,5 +38,8 @@ dreams_lbl = ttk.Label(app, text="dreams:")
 dreams_lbl.grid(column=0, row=6, sticky=ttk.W, padx=10, pady=5)
 #----------
 submit_btn = ttk.Button(app, bootstyle="danger" , text="apply", command = calculate_503020)
-submit_btn.grid(columnspan=1, row=3, sticky=ttk.EW, padx=10, pady=5)
+submit_btn.grid(columnspan=2, row=3, sticky=ttk.EW, padx=10, pady=5)
+
+# message_btm = ttk.Button(app ,text="click",command=message )
+# message_btm.grid(column=0 , row= 4)
 app.mainloop()
