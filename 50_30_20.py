@@ -10,8 +10,6 @@ def calculate_503020():
     needs_lbl.configure(text=f"needs :{needs} $")
     save_lbl.configure(text=f"save :{save} $")
     dreams_lbl.configure(text=f"dream :{dreams} $")
-# def message(): 
-#     app_1 = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 # ------ create app
 app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 #-----------salary_text
@@ -40,6 +38,8 @@ dreams_lbl.grid(column=0, row=6, sticky=ttk.W, padx=10, pady=5)
 submit_btn = ttk.Button(app, bootstyle="danger" , text="apply", command = calculate_503020)
 submit_btn.grid(columnspan=2, row=3, sticky=ttk.EW, padx=10, pady=5)
 
+# def message(): 
+#     app_1 = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 # message_btm = ttk.Button(app ,text="click",command=message )
 # message_btm.grid(column=0 , row= 4)
 app.mainloop()
