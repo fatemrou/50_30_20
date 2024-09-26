@@ -1,15 +1,35 @@
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
-def calculate_503020():
+def message() :
+    per_app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
+    per_lbl = ttk.Label(per_app ,text="Assuming that you get 10% more salary every month")
+    per_lbl.grid(columnspan=2, row=0, sticky=ttk.N, padx=20, pady=5)
+    #----------
+    submit_btn = ttk.Button(per_app, bootstyle="danger" , text="apply", command = percentage_salary)
+    submit_btn.grid(columnspan=2, row=3, sticky=ttk.EW, padx=10, pady=5)
+
+def percentage_salary () :
     salary = int(salary_entry.get())
     month = int(month_entry.get())
+    per_s = (5*month**2 + 95*month)
+    needs = (salary * 50 / 100)*per_s
+    save = (needs * 30 / 100)*per_s
+    dreams = (needs * 20 / 100)*per_s
+    needs_lbl.configure(text=f"needs :{needs} $")
+    save_lbl.configure(text=f"save :{save} $")
+    dreams_lbl.configure(text=f"dream :{dreams} $")
+
+def calculate_503020():
+    salary = int(salary_entry.get())
+    month = int(month_entry.get()) 
     needs = (salary * 50 / 100)*month
     save = (needs * 30 / 100)*month
     dreams = (needs * 20 / 100)*month
     needs_lbl.configure(text=f"needs :{needs} $")
     save_lbl.configure(text=f"save :{save} $")
     dreams_lbl.configure(text=f"dream :{dreams} $")
+
 # ------ create app
 app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 #-----------salary_text
@@ -30,16 +50,15 @@ needs_lbl = ttk.Label(app , text="needs:")
 needs_lbl.grid(column=0, row=4, sticky=ttk.W, padx=10, pady=5)
 #-----------
 save_lbl = ttk.Label(app , text="save:")
-save_lbl.grid(column=0,row=5, sticky=ttk.W, padx=10, pady=5)
+save_lbl.grid(columns=0,row=5, sticky=ttk.W, padx=10, pady=5)
 #-----------
 dreams_lbl = ttk.Label(app, text="dreams:")
 dreams_lbl.grid(column=0, row=6, sticky=ttk.W, padx=10, pady=5)
 #----------
 submit_btn = ttk.Button(app, bootstyle="danger" , text="apply", command = calculate_503020)
 submit_btn.grid(columnspan=2, row=3, sticky=ttk.EW, padx=10, pady=5)
-
-# def message(): 
-#     app_1 = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
-# message_btm = ttk.Button(app ,text="click",command=message )
-# message_btm.grid(column=0 , row= 4)
+#----------option
+per_btn = ttk.Button(app, bootstyle="danger" , text="option", command = message)
+per_btn.grid(columnspan=2, row=7, sticky=ttk.EW, padx=10, pady=5)
+#-----------
 app.mainloop()
