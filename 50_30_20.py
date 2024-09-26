@@ -12,49 +12,39 @@ def calculate_503020():
     dreams_lbl.configure(text=f"dream :{dreams} $")
 
 # ------ create app
-app = ttk.Window("test ttk boostrap" ,"litera")
-app.geometry("400x400")
-salary_lbl = ttk.Label(app ,text="Please enter your salary and month")
-salary_lbl.pack()
-
+app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
+app.geometry("400x300")
 # configure the grid
 app.columnconfigure(0, weight=1)
 app.columnconfigure(1, weight=1)
-#-----------
+app.columnconfigure(2, weight=1)
+app.columnconfigure(3, weight=1)
+app.columnconfigure(4, weight=1)
+app.columnconfigure(5, weight=1)
+app.columnconfigure(6, weight=1)
+#-----------salary_text
+salary_lbl = ttk.Label(app ,text="Please enter your salary and month")
+salary_lbl.grid(column=0, row=0, sticky=ttk.EW, padx=20, pady=5)
+#------------salary
 salary_lbl_1 = ttk.Label(app ,text="salary:")
-salary_lbl_1.grid(column=0, row=0,pady=0)
-salary_lbl.pack()
+salary_lbl_1.grid(column=0, row=1, sticky=ttk.W, padx=10, pady=5)
 salary_entry = ttk.Entry(app,bootstyle="success" )
-salary_entry.grid(column=1, row=0,pady=0)
-salary_entry.pack()
-#-----------
+salary_entry.grid(column=1, row=1, sticky=ttk.W, padx=10, pady=5)
+#-----------month
 month_lbl = ttk.Label(app ,text="month:")
-month_lbl.grid(column=0, row=1,pady=0)
-month_lbl.pack()
+month_lbl.grid(column=0, row=2, sticky=ttk.W, padx=10, pady=5)
 month_entry = ttk.Entry(app, bootstyle="success")
-month_entry.grid(column=1, row=1,pady=0)
-month_entry.pack()
-
-#-----------
+month_entry.grid(column=1, row=2, sticky=ttk.W, padx=10, pady=5)
 #-----------
 needs_lbl = ttk.Label(app , text="needs:")
-needs_lbl.pack()
-#----------
+needs_lbl.grid(column=0, row=4, sticky=ttk.W, padx=10, pady=5)
 #-----------
 save_lbl = ttk.Label(app , text="save:")
-save_lbl.pack()
-#----------
+save_lbl.grid(column=0,row=5, sticky=ttk.W, padx=10, pady=5)
 #-----------
 dreams_lbl = ttk.Label(app, text="dreams:")
-dreams_lbl.pack()
+dreams_lbl.grid(column=0, row=6, sticky=ttk.W, padx=10, pady=5)
 #----------
-
 submit_btn = ttk.Button(app, bootstyle="danger" , text="apply", command = calculate_503020)
-submit_btn.pack()
-
-
-
-    
-
-
+submit_btn.grid(columnspan=1, row=3, sticky=ttk.EW, padx=10, pady=5)
 app.mainloop()
