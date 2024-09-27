@@ -50,7 +50,7 @@ needs_lbl = ttk.Label(app , text="needs:")
 needs_lbl.grid(column=0, row=4, sticky=ttk.W, padx=10, pady=5)
 #-----------
 save_lbl = ttk.Label(app , text="save:")
-save_lbl.grid(columns=0,row=5, sticky=ttk.W, padx=10, pady=5)
+save_lbl.grid(column=0,row=5, sticky=ttk.W, padx=10, pady=5)
 #-----------
 dreams_lbl = ttk.Label(app, text="dreams:")
 dreams_lbl.grid(column=0, row=6, sticky=ttk.W, padx=10, pady=5)
