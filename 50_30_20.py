@@ -50,10 +50,10 @@ needs_lbl = ttk.Label(app , text="needs:")
 needs_lbl.grid(columnspan=2, row=4, sticky=ttk.W, padx=10, pady=5)
 #-----------
 save_lbl = ttk.Label(app , text="save:")
-save_lbl.grid(columns=0,row=5, sticky=ttk.W, padx=10, pady=5)
+save_lbl.grid(columnspan=2,row=5, sticky=ttk.W, padx=10, pady=5)
 #-----------
 dreams_lbl = ttk.Label(app, text="dreams:")
-dreams_lbl.grid(columnspan=21, row=6, sticky=ttk.W, padx=10, pady=5)
+dreams_lbl.grid(columnspan=2, row=6, sticky=ttk.W, padx=10, pady=5)
 #----------
 submit_btn = ttk.Button(app, bootstyle="danger" , text="apply", command = calculate_503020)
 submit_btn.grid(columnspan=2, row=3, sticky=ttk.EW, padx=10, pady=5)
