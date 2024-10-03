@@ -21,14 +21,17 @@ panel.grid()
 # ------ create Treeview
 tv = ttk.Treeview(panel, show='headings', height= number_months)
 # ------ create Treeview columns
-tv.configure(columns=(
+tv.configure(
+    columns=(
     'month', 'capital', 'need', 
     'dream', 'save'
 ))
 
 for col in tv['columns']:
     tv.heading(col, text=col.title(), anchor=W)
-
+# tv.heading('month', text='month'.title(), anchor=W)
+# tv.heading('capital', text='capital'.title(), anchor=W)
+# tv.heading('need', text='need'.title(), anchor=W)
 # ------ display Treeview by grid
 tv.grid()
 
@@ -50,5 +53,4 @@ for month in range(1, number_months + 1):
                   round(saves, 2))
     )
     capital += capital * capital_growth_percentage / 100
-
 app.mainloop()
