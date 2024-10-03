@@ -2,6 +2,7 @@ import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
 # default data:
+# they can merge with 50_30_20 file
 capital = 4000
 capital_growth_percentage = 10
 need_percentage = 50
