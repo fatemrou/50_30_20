@@ -1,6 +1,7 @@
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
+# message :
 def message() :
     per_app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
     per_lbl = ttk.Label(per_app ,text="Assuming that you get 10% more salary every month")
