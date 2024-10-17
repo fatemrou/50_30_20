@@ -2,6 +2,7 @@ import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
 # default data:
+# they can merge with 50_30_20 file
 capital = 4000
 capital_growth_percentage = 10
 need_percentage = 50
@@ -21,14 +22,17 @@ panel.grid()
 # ------ create Treeview
 tv = ttk.Treeview(panel, show='headings', height= number_months)
 # ------ create Treeview columns
-tv.configure(columns=(
+tv.configure(
+    columns=(
     'month', 'capital', 'need', 
     'dream', 'save'
 ))
 
 for col in tv['columns']:
     tv.heading(col, text=col.title(), anchor=W)
-
+# tv.heading('month', text='month'.title(), anchor=W)
+# tv.heading('capital', text='capital'.title(), anchor=W)
+# tv.heading('need', text='need'.title(), anchor=W)
 # ------ display Treeview by grid
 tv.grid()
 
