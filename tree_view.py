@@ -11,11 +11,11 @@ number_months = 12
 month_number = 1
 #---------------------------
 
-# ------ create app
-app = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
+# ------ create result_window
+result_window = ttk.Window("50 30 20 " ,"litera", resizable=(False, False))
 
 # ------ create frame
-panel = ttk.Frame(app, padding=(2, 1))
+panel = ttk.Frame(result_window, padding=(2, 1))
 panel.grid()
 
 # ------ create Treeview
@@ -51,4 +51,4 @@ for month in range(1, number_months + 1):
     )
     capital += capital * capital_growth_percentage / 100
 
-app.mainloop()
+result_window.mainloop()
